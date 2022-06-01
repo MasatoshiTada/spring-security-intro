@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>404ページ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>404ページ</h1>
+    <p>URLが存在しません。</p>
+    <ul>
+        <li><a href="index.html" th:href="@{/}">トップページへ</a></li>
+    </ul>
+    <form sec:authorize="authenticated" method="post" action="index.html" th:action="@{/logout}">
+        <button type="submit">ログアウト</button>
+    </form>
+</body>
+</html>

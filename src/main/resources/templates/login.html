@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title>ログインページ</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+    <h1>ログインページ</h1>
+    <p th:if="${#request.queryString.contains('error')}" class="error">
+        ユーザー名またはパスワードが違います。
+    </p>
+    <form method="post" action="index.html" th:action="@{/login}">
+        ユーザー名: <input type="text" name="username"><br>
+        パスワード: <input type="password" name="password"><br>
+        <button type="submit">ログイン</button>
+    </form>
+</body>
+</html>
