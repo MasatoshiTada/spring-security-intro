@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>ログインページ</h1>
-    <p th:if="${#request.queryString.contains('error')}" class="error">
+    <p th:if="${param.error}" class="error">
         ユーザー名またはパスワードが違います。
     </p>
     <form method="post" action="index.html" th:action="@{/login}">
