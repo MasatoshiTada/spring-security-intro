@@ -4,9 +4,9 @@ Spring Securityのサンプルコードです。
 
 # 環境
 - JDK 17
-- Spring Boot 2.7.0
-- Spring Security 5.7.1
-- Thymeleaf 3
+- Spring Boot 3.0.0-RC2
+- Spring Security 6.0.0-RC2
+- Thymeleaf 3.1.0.RC1
 - H2 Database
 
 # 実行
